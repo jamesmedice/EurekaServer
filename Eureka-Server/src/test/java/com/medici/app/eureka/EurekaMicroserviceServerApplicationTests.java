@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class EurekaDiscoveryMicroserviceServerApplicationTests {
+public class EurekaMicroserviceServerApplicationTests {
 
 	@Test
 	public void contextLoads() {
