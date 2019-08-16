@@ -1,0 +1,25 @@
+server:
+  port: 8965
+  ribbon: 
+    ServerListRefreshInterval: 1000
+    eureka:
+      enabled: true
+      
+
+eureka:
+  client:
+    healthcheck:
+      enabled: false
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
+spring:
+  application:
+    name: Ribbon-Service
+
+logging:
+  level:
+    com.medici.app.eureka: DEBUG
