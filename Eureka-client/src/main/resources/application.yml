@@ -16,7 +16,9 @@ eureka:
 spring:
   application:
     name: Environment-Service
-    
+  profiles:
+    active: native
+
   
 management:
   security:

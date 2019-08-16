@@ -1,0 +1,28 @@
+server:
+  port: 9832
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+zuul:
+  routes:
+    producer:
+      url=http://localhost:9854
+
+spring:
+  application:
+    name: Zuul-Service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+
+logging:
+  level:
+    com.medici.app.eureka: DEBUG
