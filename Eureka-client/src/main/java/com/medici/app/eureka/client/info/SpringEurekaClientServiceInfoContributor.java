@@ -16,7 +16,7 @@ public class SpringEurekaClientServiceInfoContributor implements InfoContributor
 
 	@Override
 	public void contribute(Info.Builder builder) {
-		builder.withDetail("details", Collections.singletonMap("description", "This is the Environment Service [Microservice]"));
+		builder.withDetail("Microservice", Collections.singletonMap("Description", "This is the Environment Service [Microservice]"));
 	}
 
 }
