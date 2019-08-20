@@ -12,7 +12,7 @@ server:
 Environment-Service:
   ribbon:
     eureka:
-      enabled: false
+      enabled: true
     listOfServers: localhost:9854,localhost:9888,localhost:9999
     ServerListRefreshInterval: 15000
 
