@@ -1,10 +1,20 @@
+spring:
+  application:
+    name: Ribbon-Service
+
 server:
   port: 8965
   ribbon: 
     ServerListRefreshInterval: 1000
     eureka:
       enabled: true
-      
+
+Environment-Service:
+  ribbon:
+    eureka:
+      enabled: true
+    listOfServers: localhost:9854,localhost:9888,localhost:9999
+    ServerListRefreshInterval: 15000
 
 eureka:
   client:
@@ -13,12 +23,9 @@ eureka:
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
   instance:
+    appname: Ribbon-Service 
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
-
-spring:
-  application:
-    name: Ribbon-Service
 
 logging:
   level:
