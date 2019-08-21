@@ -1,0 +1,8 @@
+server:
+  port: 9411
+
+spring:
+  application:
+    name: Zipkin-Service
+  profiles:
+    active: trace
