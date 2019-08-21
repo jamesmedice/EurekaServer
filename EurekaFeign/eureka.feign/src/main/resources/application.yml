@@ -11,7 +11,3 @@ spring:
     name: Feign-Service
   profiles:
     active: proxy
-
-logging:
-  level:
-    com.medici.app.eureka.client: DEBUG

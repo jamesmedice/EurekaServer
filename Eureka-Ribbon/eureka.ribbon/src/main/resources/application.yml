@@ -26,7 +26,3 @@ eureka:
     appname: Ribbon-Service 
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
-
-logging:
-  level:
-    com.medici.app.eureka: DEBUG
