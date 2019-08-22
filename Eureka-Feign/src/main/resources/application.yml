@@ -1,13 +1,12 @@
 server:
   port: 9898
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
-
 spring:
   application:
     name: Feign-Service
-  profiles:
-    active: proxy
+
+eureka:
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/

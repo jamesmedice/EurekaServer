@@ -17,9 +17,13 @@ public class EurekaZuulClientController {
 	@Autowired
 	DiscoveryClient discoveryClient;
 
-	@GetMapping(value = "/servers")
-	public List<ServiceInstance> listServers() {
+	@GetMapping(value = "/env/servers")
+	public List<ServiceInstance> listEnvServers() {
 		return discoveryClient.getInstances("ENVIRONMENT-SERVICE");
+	}
+	@GetMapping(value = "/feign/servers")
+	public List<ServiceInstance> listFeignServers() {
+		return discoveryClient.getInstances("FEIGN-SERVICE");
 	}
 
 }

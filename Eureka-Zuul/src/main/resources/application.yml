@@ -27,9 +27,7 @@ eureka:
 
 zuul:
   routes:
-    gateway-Service:
-      serviceId: ENVIRONMENT-SERVICE
-
-logging:
-  level:
-    com.medici.app.eureka: DEBUG
+    gateway-Environment:
+      serviceId: Environment-Service
+    gateway-Feign:
+      serviceId: Feign-Service
