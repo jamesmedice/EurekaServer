@@ -5,10 +5,3 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
-    
-spring:
-  boot:
-    admin:
-      context-path: /admin

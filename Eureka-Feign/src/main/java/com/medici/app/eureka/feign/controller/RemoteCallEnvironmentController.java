@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.medici.app.eureka.feign.service.RemoteEnvironmentProxy;
 
 @RestController
-@RequestMapping("/environment")
 public class RemoteCallEnvironmentController {
 
 	protected Logger logger = Logger.getLogger(RemoteCallEnvironmentController.class.getName());
@@ -21,13 +20,13 @@ public class RemoteCallEnvironmentController {
 
 	@RequestMapping(value = "/profiles", method = RequestMethod.GET)
 	public String[] activeProfiles() {
-		logger.info("REMOTE CALL FEIGN:  /environment/profiles");
+		logger.info("REMOTE CALL FEIGN:  /profiles");
 		return proxy.activeProfiles();
 	}
 
 	@RequestMapping(value = "/vars", method = RequestMethod.GET)
 	public Map<String, String> envVars() {
-		logger.info("REMOTE CALL FEIGN:  /environment/envVars");
+		logger.info("REMOTE CALL FEIGN:  /envVars");
 		return proxy.envVars();
 	}
 

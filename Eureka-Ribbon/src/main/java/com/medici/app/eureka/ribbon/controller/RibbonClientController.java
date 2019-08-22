@@ -16,8 +16,8 @@ public class RibbonClientController {
 	@Autowired
 	LoadBalancerClient loadBalancer;
 
-	@GetMapping(value = "/balance")
-	public String loadBalancing() {
+	@GetMapping(value = "/env")
+	public String loadBalancingEnv() {
 		ServiceInstance serviceInstance = loadBalancer.choose("Environment-Service");
 		return serviceInstance.getUri().toString();
 	}
